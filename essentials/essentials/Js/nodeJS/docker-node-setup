@@ -1,0 +1,2 @@
+docker run -it --entrypoint bash node:latest // to get shell into node
+

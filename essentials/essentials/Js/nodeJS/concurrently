@@ -1,0 +1,1 @@
+"start": "concurrently  \"live-server src/\"         \"nodemon src/index.js \" "

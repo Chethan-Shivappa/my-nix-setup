@@ -1,0 +1,29 @@
+npm set prefix ~/.npm-global
+npm list -g --depth=0 // on other os
+npm list --depth=0 // on nixos
+
+
+
+Add the following to your ~/.npmrc to have it put the packages in the ~/.npm-packages folder:
+prefix = ${HOME}/.npm-packages
+
+export PATH=~/.npm-packages/bin:$PATH
+export NODE_PATH=~/.npm-packages/lib/node_modules
+source ./zshrc
+
+----
+csh@nixie2 ~> npm i -g nodemon
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+added 32 packages, and audited 33 packages in 6s
+
+3 packages are looking for funding
+  run `npm fund` for details
+---
+
+add required packages to (home.nix || configuration.nix)
+eg:
+    nodePackages."@nestjs/cli"
+    nodePackages.nodemon
+
+
