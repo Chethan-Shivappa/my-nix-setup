@@ -1,1 +1,0 @@
-javascript:(function(){var speed = prompt("Speed?");if (speed!==null){document.getElementsByTagName("video")[0].playbackRate = speed;}})();
