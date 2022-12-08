@@ -102,8 +102,8 @@
 
   programs.git = {
     enable = true;
-    userName = "userName";
-    userEmail = "userEmail";
+    userName = "Chethan S H";
+    userEmail = "chethan.sh@hotmail.com";
   };
   
 }
