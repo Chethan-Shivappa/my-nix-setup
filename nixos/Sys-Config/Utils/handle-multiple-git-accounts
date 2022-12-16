@@ -1,0 +1,49 @@
+---
+# Generate SSH keys 
+ssh-keygen -t ed25519 -C "<comment>"
+ssh-keygen -t ed25519 -C "usually_ur_email"
+
+---
+# Save ssh-keys
+save as id_alg_identity
+eg: id_ed25519_ch
+
+---
+# Add Config file to ssh-dir
+~/.ssh/config 
+paste the below contents
+
+Host ch_gh
+    HostName github.com
+    PreferredAuthentications publickey
+    User git
+    IdentityFile ~/.ssh/id_ed25519_ch
+
+Host ch_gl
+    HostName gitlab.com
+    PreferredAuthentications publickey
+    User git
+    IdentityFile ~/.ssh/id_ed25519_ch
+
+Host ch_bb
+    HostName bitbucket.org
+    PreferredAuthentications publickey
+    User git
+    IdentityFile ~/.ssh/id_ed25519_ch
+
+Host cn_gl
+    HostName gitlab.com
+    PreferredAuthentications publickey
+    User git
+    IdentityFile ~/.ssh/id_ed25519_cn
+
+Host cs_gl
+    HostName gitlab.com
+    PreferredAuthentications publickey
+    User git
+    IdentityFile ~/.ssh/id_ed25519_cs
+---
+# Add respctive keys to repository-management-platforms
+
+copy id_alg_identity.pub to repo-mgmt-platforms
+eg: cp id_ed25519_ch.pub as ssh-keys to gitlab | github 

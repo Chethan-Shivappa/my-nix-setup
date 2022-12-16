@@ -1,0 +1,13 @@
+// creating virtual environment
+python -m venv env_name
+
+// activating virtual environment
+source env_name/bin/activate
+// In case of fish shell
+source env_name/bin/activate.fish
+
+// to list installed packages
+pip list
+
+// to upgrade pip
+pip install --upgrade pip

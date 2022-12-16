@@ -1,0 +1,4 @@
+prs clone "git-repo"
+prs recipients list
+prs recipients add (select your gpg key)
+prs list
